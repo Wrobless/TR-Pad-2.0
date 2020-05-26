@@ -1,6 +1,7 @@
 #property strict
 
 #include <defines.mqh>
+#include <texts.mqh>
 #include <TRPad.mqh>
 
 extern double inpLot = 1.0;                                // Number of lots
@@ -17,7 +18,7 @@ TRPad Panel(&Trade);
 
 int OnInit()
 {
-  if (!Panel.Create(0, "TR Pad 2.0", 0, 20, 20, PANEL_WIDTH, PANEL_HEIGHT))
+  if (!Panel.Create(0, s_panel_name, 0, PANEL_INIT_X, PANEL_INIT_Y, PANEL_WIDTH, PANEL_HEIGHT))
     return(INIT_FAILED);
   Panel.Run();
 
@@ -31,7 +32,7 @@ void OnDeinit(const int reason)
 
 void OnTick()
 {
-  
+  Panel.UpdateValues();
 }
 
 void OnChartEvent(const int id, const long &lparam, const double &dparam, const string &sparam)
