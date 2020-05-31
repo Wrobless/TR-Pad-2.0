@@ -37,9 +37,4 @@ void OnTick()
 void OnChartEvent(const int id, const long &lparam, const double &dparam, const string &sparam)
 {
   Panel.OnEvent(id, lparam, dparam, sparam);
-
-  if (id == CHARTEVENT_CLICK && sparam != s_moveslbutton_name)
-  {
-    
-  }
 }
