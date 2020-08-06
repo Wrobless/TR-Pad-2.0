@@ -31,7 +31,7 @@ void OnDeinit(const int reason)
 
 void OnTick()
 {
-  Panel.UpdateValues();
+  // Panel.UpdateValues();
 }
 
 void OnChartEvent(const int id, const long &lparam, const double &dparam, const string &sparam)
