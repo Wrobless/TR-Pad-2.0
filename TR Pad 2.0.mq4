@@ -19,7 +19,7 @@ CRect last_panel_position;
 
 int OnInit()
 {
-  if (!Panel.Create(0, s_panel_name, 0, PANEL_INIT_X, PANEL_INIT_Y, PANEL_WIDTH, PANEL_HEIGHT))
+  if (!Panel.Create())
     return (INIT_FAILED);
   if (GlobalVariableCheck("left"))
   {
